@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../..//css/home.css">
+</head>
+<body>
+  <div class="div1"><input type="button" value="go back" id="goBack" onclick='window.location.href="../../home"' /></div>
+
+  <div id="input">
+    <p>want to post comments?</p>
+    <textarea id="comment" name="comment"></textarea><br>
+    <input type="button" id="post" value="post" />
+  </div>
+  
+   <table class="comment">
+    <tr>
+      <th>author:<span id="author"><%= msg[0].name %></span></th>
+      <th>topic:<span id="topic"><%= msg[0].topic %></span></th>
+      <th>time:<%= msg[0].date %></th>
+    </tr>
+  <% for(var i=0; i<msg[0].comment.length; i++) {%>
+  <tr class="users">
+      <td>follower:<%= msg[0].comment[i].name %></td>
+      <td style="word-wrap:break-word;width:900px;table-layout:fixed"><%= msg[0].comment[i].comment %></td>
+  </tr>
+  <% } %>
+  </table>
+
+  
+</body>
+<script src="../../javascript/comment.js">
+<script src="../../javascript/sanitize.js">
+
+</script>
+</html>

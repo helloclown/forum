@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+  body {background-color:  orange;}
+  #div1 {
+    position:fixed;
+    top:150px;
+    right:650px;
+  }
+</style>
+</head>
+<body>
+  <div id="div1">
+      <h1>Change Password</h1>
+      <input type="text" placeholder="username" name="username" id="username" /><br><br>
+      <input type="password" placeholder="newpassword" name="newpassword" id="newpassword" /><br><br>
+      <button id="change">Change Your Password</button>
+      <p class="message">Remember it? <a href="/">Go to login</a></p><br>
+      <p class="message">Need a new account? <a href="/signup">Create an account</a></p>
+  </div>
+</body>
+<script src="/javascript/sanitize.js"></script>
+<script src="/javascript/change.js"></script>
+</html>

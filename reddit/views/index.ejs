@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<style>
+  body {background-color:  orange;}
+  fieldset {width: 250px;}
+  #div1 {
+    position:fixed;
+    top:150px;
+    right:600px;
+  }
+</style>
+</head>
+<body>
+  <div id="div1">
+    <h1>Welcome to My forum</h1>
+  <fieldset>
+    <legend>login</legend>
+    username:<input type="text" name="username" id="username" />
+    password: <input type="password" name="password" id="password" />
+  </fieldset>
+  <input type="button" value="login" id="login" /><br><br>
+  <p class="message">Not registered? <a href="/signup">Create an account</a></p><br>
+  <p class="message">Forget password? <a href="/change">Change your password</a></p>
+  </div>
+</body>
+<script src="/javascript/sanitize.js"></script>
+<script src="/javascript/login.js"></script>
+</html>

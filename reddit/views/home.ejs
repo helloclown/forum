@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+<body>
+  <div id="div1"><div id="div_name"></div><input type="button" value="logout" id="logout" /></div>
+  <div id="input">
+    <p>want to post topics?</p>
+    <textarea id="topic" name="topic"></textarea><br>
+    <input type="button" id="post" value="post" />
+  </div>
+
+  <table class="msg">
+    <tr>
+      <th>name</th>
+      <th>topic</th>
+      <th>time</th>
+      <th>modify</th>
+    </tr>
+  <% for(var i=0; i<msg.length; i++) {%>
+  <tr class="users">
+      <td><%= msg[i].name %></td>
+      <td style="word-wrap:break-word;width:900px;table-layout:fixed"><a class="go"><%= msg[i].topic %></a></td>
+      <td><%= msg[i].date %></td>
+      <td><input type="button" class="delete" value="delete" /></td>
+  </tr>
+  <% } %>
+  </table>
+  
+</body>
+<script src="/javascript/sanitize.js"></script>
+<script src="/javascript/home.js"></script>
+</html>

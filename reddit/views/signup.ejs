@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<style>
+  body {background-color: orange;}
+  #div1 {
+    position:fixed;
+    top:150px;
+    right:650px;
+  }
+</style>
+</head>
+<body>
+    <div id="div1">
+      <h1>Sign up</h1>
+      <input type="text" placeholder="nickname" name="name" id="name" /><br><br>
+      <input type="text" placeholder="username" name="username" id="username" /><br><br>
+      <input type="password" placeholder="password" name="password" id="password" /><br><br>
+      <input type="button" id="submit" value="submit"></input>
+    <p class="message">Already have account? <a href="/">Go to login</a></p><br>
+    </div>
+</body>
+<script src="/javascript/sanitize.js"></script>
+<script src="/javascript/signup.js"></script>
+</html>
